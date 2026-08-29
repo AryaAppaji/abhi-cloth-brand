@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function FinalCTA() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -24,7 +25,7 @@ export default function FinalCTA() {
     <section className="relative py-32 sm:py-48 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/prod-blazer-main.jpg"
+          src={prefixPath("/images/prod-blazer-main.jpg")}
           alt="Abhi Finale Image"
           fill
           className="object-cover object-center grayscale contrast-[1.08] saturate-50"

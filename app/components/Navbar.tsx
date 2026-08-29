@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -66,7 +67,7 @@ export default function Navbar() {
             >
               <div className="relative h-9 w-9 overflow-hidden rounded-full border border-neutral-200/30 group-hover:border-brand-accent transition-colors duration-300">
                 <Image
-                  src="/logo.jpeg"
+                  src={prefixPath("/logo.jpeg")}
                   alt="Abhi Logo"
                   fill
                   sizes="36px"

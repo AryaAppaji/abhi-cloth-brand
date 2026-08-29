@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Product } from "./Products";
+import { prefixPath } from "../utils/paths";
 
 export interface CartItem {
   product: Product;
@@ -82,7 +83,7 @@ export default function CartDrawer({
                   {/* Item Image */}
                   <div className="relative w-16 h-20 bg-neutral-100 flex-shrink-0">
                     <Image
-                      src={item.product.image}
+                      src={prefixPath(item.product.image)}
                       alt={item.product.name}
                       fill
                       className="object-cover"

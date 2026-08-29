@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function Lookbook() {
   return (
@@ -29,7 +30,7 @@ export default function Lookbook() {
             data-aos-duration="1200"
           >
             <Image
-              src="/images/lookbook-1.jpg"
+              src={prefixPath("/images/lookbook-1.jpg")}
               alt="Abhi Lookbook Autumn Editorial"
               fill
               className="object-cover transition-transform duration-700 ease-out hover:scale-103"
@@ -50,7 +51,7 @@ export default function Lookbook() {
               data-aos-duration="1200"
             >
               <Image
-                src="/images/lookbook-2.jpg"
+                src={prefixPath("/images/lookbook-2.jpg")}
                 alt="Abhi Atelier Studio Lookbook"
                 fill
                 className="object-cover transition-transform duration-700 ease-out hover:scale-103"
@@ -68,7 +69,7 @@ export default function Lookbook() {
               data-aos-duration="1200"
             >
               <Image
-                src="/images/prod-coat-hover.jpg"
+                src={prefixPath("/images/prod-coat-hover.jpg")}
                 alt="Abhi Linen Suit Editorial"
                 fill
                 className="object-cover transition-transform duration-700 ease-out hover:scale-103"
@@ -86,7 +87,7 @@ export default function Lookbook() {
               data-aos-duration="1200"
             >
               <Image
-                src="/images/prod-trousers-main.jpg"
+                src={prefixPath("/images/prod-trousers-main.jpg")}
                 alt="Abhi Trousers drape close up"
                 fill
                 className="object-cover transition-transform duration-700 ease-out hover:scale-103"

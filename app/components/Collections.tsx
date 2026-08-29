@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function Collections() {
   return (
@@ -32,7 +33,7 @@ export default function Collections() {
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
               <Image
-                src="/images/collection-linen.jpg"
+                src={prefixPath("/images/collection-linen.jpg")}
                 alt="The Linen Series"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
@@ -65,7 +66,7 @@ export default function Collections() {
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
               <Image
-                src="/images/collection-knits.jpg"
+                src={prefixPath("/images/collection-knits.jpg")}
                 alt="Sculpted Knits"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
@@ -98,7 +99,7 @@ export default function Collections() {
           >
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-neutral-200">
               <Image
-                src="/images/collection-tailoring.jpg"
+                src={prefixPath("/images/collection-tailoring.jpg")}
                 alt="Everyday Tailoring"
                 fill
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"

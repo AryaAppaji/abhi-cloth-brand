@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function Editorial() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -24,7 +25,7 @@ export default function Editorial() {
     <section className="relative h-[80vh] min-h-[500px] flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/editorial.jpg"
+          src={prefixPath("/images/editorial.jpg")}
           alt="Abhi Lifestyle Editorial"
           fill
           className="object-cover object-center grayscale contrast-110"

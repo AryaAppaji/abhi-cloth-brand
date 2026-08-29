@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export default function Hero() {
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -25,7 +26,7 @@ export default function Hero() {
       {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero.jpg"
+          src={prefixPath("/images/hero.jpg")}
           alt="Abhi Editorial Campaign Hero"
           fill
           priority

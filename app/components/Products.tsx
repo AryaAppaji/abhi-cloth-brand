@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { prefixPath } from "../utils/paths";
 
 export interface Product {
   id: number;
@@ -55,7 +56,7 @@ export default function Products({ products, onQuickView }: ProductsProps) {
                 
                 {/* Primary Image */}
                 <Image
-                  src={product.image}
+                  src={prefixPath(product.image)}
                   alt={product.name}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -64,7 +65,7 @@ export default function Products({ products, onQuickView }: ProductsProps) {
                 
                 {/* Hover Image */}
                 <Image
-                  src={product.hoverImage}
+                  src={prefixPath(product.hoverImage)}
                   alt={`${product.name} Alternate View`}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"

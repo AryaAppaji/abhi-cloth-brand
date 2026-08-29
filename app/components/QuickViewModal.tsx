@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Product } from "./Products";
+import { prefixPath } from "../utils/paths";
 
 interface QuickViewModalProps {
   product: Product;
@@ -28,7 +29,7 @@ export default function QuickViewModal({ product, onClose, onAddToBag }: QuickVi
         {/* Left: Gallery Panel */}
         <div className="w-full md:w-1/2 relative bg-brand-warmgray aspect-[4/5] md:aspect-auto md:h-auto min-h-[300px]">
           <Image
-            src={quickViewImageIndex === 0 ? product.image : product.hoverImage}
+            src={prefixPath(quickViewImageIndex === 0 ? product.image : product.hoverImage)}
             alt={product.name}
             fill
             className="object-cover"
