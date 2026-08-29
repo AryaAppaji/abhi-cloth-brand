@@ -9,10 +9,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   basePath: isProd ? `/${repoName}` : '',
-  // Expose the base path to client components at build time
-  env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? `/${repoName}` : '',
-  }
 };
 
 export default nextConfig;
